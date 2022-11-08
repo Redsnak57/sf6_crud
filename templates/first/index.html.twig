@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="html">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "template.html.twig" %}
+
+{% block title %}
+    {{ firstName }} {{ name }}
+{% endblock %}
+    
+{% block body %}
     <div>
         <p> Salut {{ name }} </p>
+        Mon url absolue est : {{ url("first") }}
     </div>
-</body>
-</html>
+{% endblock %}

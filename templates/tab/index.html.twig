@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="html">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset("node_modules/bootstrap/dist/css/bootstrap.css") }}">
-</head>
-<body>
+{% extends "template.html.twig" %}
+
+{% block body %}
     <table class="table">
-       {% for note in notes %}
+        {% for note in notes %}
             <tr>
                 <td>{{ note }}</td>
             </tr>
-       {% endfor %}
+        {% endfor %}
     </table>
 
     <div class="alert alert-info">
@@ -21,5 +14,4 @@
         <p>Nombre minimal : {{min(notes) }}</p>
         <p>Nombre maximal : {{max(notes) }}</p>
     </div>
-</body>
-</html>
+{% endblock %}
